@@ -31,11 +31,14 @@ Despertador que para desativar o alarme você joga simon says com cores, usando 
 
 | Componente | Pino da placa |
 | --- | --- |
-| Sensor de Toque A | 21 |
-| Sensor de Toque B | 19 |
-| Sensor de Toque C | 23 |
-| Sensor de Toque D | 22 |
-| Sensores de temperatura | 4 |
+| Botão A | 12 |
+| Botão B | 2 |
+| Botão C | 4 |
+| Botão D | 18 |
+| Led A | 27 |
+| Led B | 14 |
+| Led C | 5 |
+| Buzzer | 23 |
 
 
 ### Funcionamento dos sensores e atuadores
