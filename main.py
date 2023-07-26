@@ -61,9 +61,6 @@ def add_led():
 
 def on_btn_press(index):
     global led_sequence, seq_index, shown_sequence
-    
-    print(str(index) + " pressed")
-    print(led_sequence)
 
     if(index == led_sequence[seq_index]):
         seq_index += 1
@@ -72,9 +69,6 @@ def on_btn_press(index):
             win_round()
     else:
         reset()
-    
-def on_btn_release(index):
-    print(str(index) + " released")
 
 def handle_input():
     global btn_states
@@ -87,7 +81,6 @@ def handle_input():
             on_btn_press(i)
         elif btn_states[i] == True and btn_state == False:
             btn_states[i] = False
-            on_btn_release(i)
 
 async def show_sequence():
     global shown_sequence, led_sequence
@@ -113,7 +106,6 @@ async def alarm():
     buzzer.duty(0)
 
 async def game():
-    print("start loop")
     buzzer.duty(duty)
     start_btn = Pin(18, Pin.OUT)
     
@@ -158,7 +150,7 @@ class ESPServer:
 			});</script></html>"""
         return html
                 
-    def start(self):
+    async def start(self):
         # Inicialização do socket
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.bind(('', 3000))
@@ -208,5 +200,5 @@ class ESPServer:
             conn.close()
 
 server = ESPServer()
-server.connect("Luis A23", "rotLu032005")
+server.connect("nomewifi", "senha")
 server.start()
