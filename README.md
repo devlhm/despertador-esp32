@@ -105,9 +105,6 @@ Informações importantes sobre o circuito, onde colocá-lo, entre outros.
 ## :electric_plug: Funcionamento do sistema
 *É necessária a versão 1.20 do Micropython*
 
-**(esquecemos de gravar o vídeo :(  )**
-
-
 - O sistema inicia o servidor, que irá servir uma página web para o usuário inserir o horário do alarme
   - Se o horário inserido já passou no dia, o alarme fica definido para o dia seguinte
 - O código espera o tanto de segundos que faltam para o alarme, e então, quando chega o horário, o alarme (toque reproduzido pelo buzzer) começa
